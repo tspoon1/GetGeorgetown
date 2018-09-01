@@ -1,0 +1,697 @@
+@import url(fonts/clear-sans.css);
+html, body {
+  margin: 0;
+  padding: 0;
+  background: url(https://www.netimpact.org/sites/default/files/images/tumblr_static_e6u3xsi23eo0ggc8sc0wws00g.jpg);
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: black;
+  color: #222;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px; }
+
+.heading:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+h1.title {
+  font-size: 64px;
+  font-weight: bold;
+  color: #121082;
+  margin: 0;
+  display: block;
+  float: left; }
+
+@-webkit-keyframes move-up {
+  0% {
+    top: 25px;
+    opacity: 1; }
+
+  100% {
+    top: -50px;
+    opacity: 0; } }
+
+@-moz-keyframes move-up {
+  0% {
+    top: 25px;
+    opacity: 1; }
+
+  100% {
+    top: -50px;
+    opacity: 0; } }
+
+@keyframes move-up {
+  0% {
+    top: 25px;
+    opacity: 1; }
+
+  100% {
+    top: -50px;
+    opacity: 0; } }
+
+.scores-container {
+  float: right;
+  text-align: right; }
+
+.score-container, .best-container {
+  position: relative;
+  display: inline-block;
+  background: #8A8B8C;
+  padding: 15px 25px;
+  font-size: 20px;
+  height: 25px;
+  line-height: 47px;
+  font-weight: bold;
+  border-radius: 3px;
+  color: white;
+  margin-top: 8px;
+  text-align: center; }
+  .score-container:after, .best-container:after {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    color: #eee4da; }
+  .score-container .score-addition, .best-container .score-addition {
+    position: absolute;
+    right: 30px;
+    color: red;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    color: rgba(119, 110, 101, 0.9);
+    z-index: 100;
+    -webkit-animation: move-up 600ms ease-in;
+    -moz-animation: move-up 600ms ease-in;
+    animation: move-up 600ms ease-in;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both; }
+
+.score-container:after {
+  content: "Score"; }
+
+.best-container:after {
+  content: "Best"; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.65; }
+
+a {
+  color: #121082;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer; }
+
+strong.important {
+  text-transform: uppercase; }
+
+hr {
+  border: none;
+  border-bottom: 1px solid #d8d4d0;
+  margin: 15px 0; }
+
+.container {
+  padding: 80px 150px;
+  background: #fff;
+  border: 1px solid #696968;
+  border-top: 4px solid #9d3c3c;
+  border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -webkit-box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.35);
+  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.35);
+  width: 90%;
+  margin: 0 auto;
+  max-width: 500px;}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.game-container {
+  position: relative;
+  padding: 15px;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  background: #8A8B8C;
+  border-radius: 6px;
+  width: 500px;
+  height: 500px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .game-container .game-message {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(238, 228, 218, 0.5);
+    z-index: 100;
+    text-align: center;
+    -webkit-animation: fade-in 800ms ease 1200ms;
+    -moz-animation: fade-in 800ms ease 1200ms;
+    animation: fade-in 800ms ease 1200ms;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both; }
+    .game-container .game-message p {
+      font-size: 60px;
+      font-weight: bold;
+      height: 60px;
+      line-height: 60px;
+      margin-top: 222px; }
+    .game-container .game-message .lower {
+      display: block;
+      margin-top: 59px; }
+    .game-container .game-message a {
+      display: inline-block;
+      background: #8f7a66;
+      border-radius: 3px;
+      padding: 0 20px;
+      text-decoration: none;
+      color: #f9f6f2;
+      height: 40px;
+      line-height: 42px;
+      margin-left: 9px; }
+      .game-container .game-message a.keep-playing-button {
+        display: none; }
+    .game-container .game-message.game-won {
+      background: rgba(237, 194, 46, 0.5);
+      color: #f9f6f2; }
+      .game-container .game-message.game-won a.keep-playing-button {
+        display: inline-block; }
+    .game-container .game-message.game-won, .game-container .game-message.game-over {
+      display: block; }
+
+.grid-container {
+  position: absolute;
+  z-index: 1; }
+
+.grid-row {
+  margin-bottom: 15px; }
+  .grid-row:last-child {
+    margin-bottom: 0; }
+  .grid-row:after {
+    content: "";
+    display: block;
+    clear: both; }
+
+.grid-cell {
+  width: 106.25px;
+  height: 106.25px;
+  margin-right: 15px;
+  float: left;
+  border-radius: 3px;
+  background: #C2C0BF; }
+  .grid-cell:last-child {
+    margin-right: 0; }
+
+.tile-container {
+  position: absolute;
+  z-index: 2; }
+
+.tile, .tile .tile-inner {
+  width: 107px;
+  height: 107px;
+  line-height: 116.25px; }
+.tile.tile-position-1-1 {
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  transform: translate(0px, 0px); }
+.tile.tile-position-1-2 {
+  -webkit-transform: translate(0px, 121px);
+  -moz-transform: translate(0px, 121px);
+  transform: translate(0px, 121px); }
+.tile.tile-position-1-3 {
+  -webkit-transform: translate(0px, 242px);
+  -moz-transform: translate(0px, 242px);
+  transform: translate(0px, 242px); }
+.tile.tile-position-1-4 {
+  -webkit-transform: translate(0px, 363px);
+  -moz-transform: translate(0px, 363px);
+  transform: translate(0px, 363px); }
+.tile.tile-position-2-1 {
+  -webkit-transform: translate(121px, 0px);
+  -moz-transform: translate(121px, 0px);
+  transform: translate(121px, 0px); }
+.tile.tile-position-2-2 {
+  -webkit-transform: translate(121px, 121px);
+  -moz-transform: translate(121px, 121px);
+  transform: translate(121px, 121px); }
+.tile.tile-position-2-3 {
+  -webkit-transform: translate(121px, 242px);
+  -moz-transform: translate(121px, 242px);
+  transform: translate(121px, 242px); }
+.tile.tile-position-2-4 {
+  -webkit-transform: translate(121px, 363px);
+  -moz-transform: translate(121px, 363px);
+  transform: translate(121px, 363px); }
+.tile.tile-position-3-1 {
+  -webkit-transform: translate(242px, 0px);
+  -moz-transform: translate(242px, 0px);
+  transform: translate(242px, 0px); }
+.tile.tile-position-3-2 {
+  -webkit-transform: translate(242px, 121px);
+  -moz-transform: translate(242px, 121px);
+  transform: translate(242px, 121px); }
+.tile.tile-position-3-3 {
+  -webkit-transform: translate(242px, 242px);
+  -moz-transform: translate(242px, 242px);
+  transform: translate(242px, 242px); }
+.tile.tile-position-3-4 {
+  -webkit-transform: translate(242px, 363px);
+  -moz-transform: translate(242px, 363px);
+  transform: translate(242px, 363px); }
+.tile.tile-position-4-1 {
+  -webkit-transform: translate(363px, 0px);
+  -moz-transform: translate(363px, 0px);
+  transform: translate(363px, 0px); }
+.tile.tile-position-4-2 {
+  -webkit-transform: translate(363px, 121px);
+  -moz-transform: translate(363px, 121px);
+  transform: translate(363px, 121px); }
+.tile.tile-position-4-3 {
+  -webkit-transform: translate(363px, 242px);
+  -moz-transform: translate(363px, 242px);
+  transform: translate(363px, 242px); }
+.tile.tile-position-4-4 {
+  -webkit-transform: translate(363px, 363px);
+  -moz-transform: translate(363px, 363px);
+  transform: translate(363px, 363px); }
+
+.tile {
+  position: absolute;
+  -webkit-transition: 100ms ease-in-out;
+  -moz-transition: 100ms ease-in-out;
+  transition: 100ms ease-in-out;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform; }
+  .tile .tile-inner {
+    border-radius: 3px;
+    background: #eee4da;
+    text-align: center;
+    font-weight: bold;
+    z-index: 10;
+    font-size: 55px; }
+  .tile.tile-2 .tile-inner {
+    background: #fff url(https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/George_Washington_University_seal.svg/1200px-George_Washington_University_seal.svg.png);
+    background-size: cover;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+  .tile.tile-4 .tile-inner {
+    background: #fff url(https://cdn.bleacherreport.net/images/team_logos/328x328/syracuse_basketball.png);
+    background-size: cover;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+  .tile.tile-8 .tile-inner {
+    background: #fff url(https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Boston_College_seal.svg/1200px-Boston_College_seal.svg.png);
+    background-size: cover; }
+  .tile.tile-16 .tile-inner {
+    background: #fff url(data:image/png;base64,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);
+    background-size: cover; }
+  .tile.tile-32 .tile-inner {
+    background: #fff url(https://cdn.bleacherreport.net/images/team_logos/328x328/northwestern.png);
+    background-size: cover; }
+  .tile.tile-64 .tile-inner {
+    background: #fff url(https://assets.primesport.com/prod/images/Villanova%20Logo.png);
+    background-size: cover; }
+  .tile.tile-128 .tile-inner {
+    background: #fff url(http://levylab.psych.psu.edu/images/site-images/funding-logos/Cornell_University.jpg/image);
+    background-size: cover;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+    font-size: 45px; }
+    @media screen and (max-width: 520px) {
+      .tile.tile-128 .tile-inner {
+        font-size: 25px; } }
+  .tile.tile-256 .tile-inner {
+    background: #fff url(http://a4.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fncaa%2F500%2F150.png);
+    background-size: cover;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+    font-size: 45px; }
+    @media screen and (max-width: 520px) {
+      .tile.tile-256 .tile-inner {
+        font-size: 25px; } }
+  .tile.tile-512 .tile-inner {
+    background: #fff url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Notre_Dame_Fighting_Irish_logo.svg/1138px-Notre_Dame_Fighting_Irish_logo.svg.png);
+    background-size: cover;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+    font-size: 45px; }
+    @media screen and (max-width: 520px) {
+      .tile.tile-512 .tile-inner {
+        font-size: 25px; } }
+  .tile.tile-1024 .tile-inner {
+    background: #fff url(https://i.pinimg.com/474x/56/e2/02/56e202811afa93709e42d6d5e1a03fab--university-of-pennsylvania-sports-logos.jpg);
+    background-size: cover;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+    font-size: 35px; }
+    @media screen and (max-width: 520px) {
+      .tile.tile-1024 .tile-inner {
+        font-size: 15px; } }
+  .tile.tile-2048 .tile-inner {
+    background: #fff url(https://www.arenagraphics.com/images/georgetown-cricle-logo.png);
+    background-size: cover;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    font-size: 35px; }
+    @media screen and (max-width: 520px) {
+      .tile.tile-2048 .tile-inner {
+        font-size: 15px; } }
+  .tile.tile-super .tile-inner {
+    background: #fff url(http://cms.montgomerycollege.edu/uploadedImages/EDU/Departments_-_Academic/Transfer/Georgetown%20Logo.png);
+    background-size: cover;
+    font-size: 30px; }
+    @media screen and (max-width: 520px) {
+      .tile.tile-super .tile-inner {
+        font-size: 10px; } }
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1); } }
+
+@-moz-keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1); } }
+
+.tile-new .tile-inner {
+  -webkit-animation: appear 200ms ease 100ms;
+  -moz-animation: appear 200ms ease 100ms;
+  animation: appear 200ms ease 100ms;
+  -webkit-animation-fill-mode: backwards;
+  -moz-animation-fill-mode: backwards;
+  animation-fill-mode: backwards; }
+
+@-webkit-keyframes pop {
+  0% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2); }
+
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1); } }
+
+@-moz-keyframes pop {
+  0% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2); }
+
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes pop {
+  0% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2); }
+
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1); } }
+
+.tile-merged .tile-inner {
+  z-index: 20;
+  -webkit-animation: pop 200ms ease 100ms;
+  -moz-animation: pop 200ms ease 100ms;
+  animation: pop 200ms ease 100ms;
+  -webkit-animation-fill-mode: backwards;
+  -moz-animation-fill-mode: backwards;
+  animation-fill-mode: backwards; }
+
+.game-intro {
+  margin: 10px 0; }
+
+.game-explanation {
+  margin-top: 50px; }
+
+@media screen and (max-width: 850px) {
+  html, body {
+    font-size: 15px; }
+
+  body {
+    padding: 0 20px; }
+
+  h1.title {
+    font-size: 36px;
+    margin-top: 5px; }
+
+  .container {
+    width: 280px;
+    margin: 0 auto;
+    padding: 50px; }
+
+  .score-container, .best-container {
+    margin-top: 0;
+    padding: 10px 8px;
+    font-size: inherit;
+    min-width: 40px; }
+
+  .heading {
+    margin-bottom: 10px; }
+
+  .game-container {
+
+    position: relative;
+    padding: 10px;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    border-radius: 6px;
+    width: 280px;
+    height: 280px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .game-container .game-message {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(238, 228, 218, 0.5);
+      z-index: 100;
+      text-align: center;
+      -webkit-animation: fade-in 800ms ease 1200ms;
+      -moz-animation: fade-in 800ms ease 1200ms;
+      animation: fade-in 800ms ease 1200ms;
+      -webkit-animation-fill-mode: both;
+      -moz-animation-fill-mode: both;
+      animation-fill-mode: both; }
+      .game-container .game-message p {
+        font-size: 60px;
+        font-weight: bold;
+        height: 60px;
+        line-height: 60px;
+        margin-top: 222px; }
+      .game-container .game-message .lower {
+        display: block;
+        margin-top: 59px; }
+      .game-container .game-message a {
+        display: inline-block;
+        background: #8f7a66;
+        border-radius: 3px;
+        padding: 0 20px;
+        text-decoration: none;
+        color: #f9f6f2;
+        height: 40px;
+        line-height: 42px;
+        margin-left: 9px; }
+        .game-container .game-message a.keep-playing-button {
+          display: none; }
+      .game-container .game-message.game-won {
+        background: rgba(237, 194, 46, 0.5);
+        color: #f9f6f2; }
+        .game-container .game-message.game-won a.keep-playing-button {
+          display: inline-block; }
+      .game-container .game-message.game-won, .game-container .game-message.game-over {
+        display: block; }
+
+  .grid-container {
+    position: absolute;
+    z-index: 1; }
+
+  .grid-row {
+    margin-bottom: 10px; }
+    .grid-row:last-child {
+      margin-bottom: 0; }
+    .grid-row:after {
+      content: "";
+      display: block;
+      clear: both; }
+
+  .grid-cell {
+    width: 57.5px;
+    height: 57.5px;
+    margin-right: 10px;
+    float: left;
+    border-radius: 3px; }
+    .grid-cell:last-child {
+      margin-right: 0; }
+
+  .tile-container {
+    position: absolute;
+    z-index: 2; }
+
+  .tile, .tile .tile-inner {
+    width: 58px;
+    height: 58px;
+    line-height: 67.5px; }
+  .tile.tile-position-1-1 {
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); }
+  .tile.tile-position-1-2 {
+    -webkit-transform: translate(0px, 67px);
+    -moz-transform: translate(0px, 67px);
+    transform: translate(0px, 67px); }
+  .tile.tile-position-1-3 {
+    -webkit-transform: translate(0px, 135px);
+    -moz-transform: translate(0px, 135px);
+    transform: translate(0px, 135px); }
+  .tile.tile-position-1-4 {
+    -webkit-transform: translate(0px, 202px);
+    -moz-transform: translate(0px, 202px);
+    transform: translate(0px, 202px); }
+  .tile.tile-position-2-1 {
+    -webkit-transform: translate(67px, 0px);
+    -moz-transform: translate(67px, 0px);
+    transform: translate(67px, 0px); }
+  .tile.tile-position-2-2 {
+    -webkit-transform: translate(67px, 67px);
+    -moz-transform: translate(67px, 67px);
+    transform: translate(67px, 67px); }
+  .tile.tile-position-2-3 {
+    -webkit-transform: translate(67px, 135px);
+    -moz-transform: translate(67px, 135px);
+    transform: translate(67px, 135px); }
+  .tile.tile-position-2-4 {
+    -webkit-transform: translate(67px, 202px);
+    -moz-transform: translate(67px, 202px);
+    transform: translate(67px, 202px); }
+  .tile.tile-position-3-1 {
+    -webkit-transform: translate(135px, 0px);
+    -moz-transform: translate(135px, 0px);
+    transform: translate(135px, 0px); }
+  .tile.tile-position-3-2 {
+    -webkit-transform: translate(135px, 67px);
+    -moz-transform: translate(135px, 67px);
+    transform: translate(135px, 67px); }
+  .tile.tile-position-3-3 {
+    -webkit-transform: translate(135px, 135px);
+    -moz-transform: translate(135px, 135px);
+    transform: translate(135px, 135px); }
+  .tile.tile-position-3-4 {
+    -webkit-transform: translate(135px, 202px);
+    -moz-transform: translate(135px, 202px);
+    transform: translate(135px, 202px); }
+  .tile.tile-position-4-1 {
+    -webkit-transform: translate(202px, 0px);
+    -moz-transform: translate(202px, 0px);
+    transform: translate(202px, 0px); }
+  .tile.tile-position-4-2 {
+    -webkit-transform: translate(202px, 67px);
+    -moz-transform: translate(202px, 67px);
+    transform: translate(202px, 67px); }
+  .tile.tile-position-4-3 {
+    -webkit-transform: translate(202px, 135px);
+    -moz-transform: translate(202px, 135px);
+    transform: translate(202px, 135px); }
+  .tile.tile-position-4-4 {
+    -webkit-transform: translate(202px, 202px);
+    -moz-transform: translate(202px, 202px);
+    transform: translate(202px, 202px); }
+
+  .game-container {
+    margin-top: 20px; }
+
+  .tile .tile-inner {
+    font-size: 35px; }
+
+  .game-message p {
+    font-size: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    margin-top: 90px !important; }
+  .game-message .lower {
+    margin-top: 30px !important; } }
